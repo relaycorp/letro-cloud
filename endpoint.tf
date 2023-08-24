@@ -4,7 +4,7 @@ locals {
 
 module "endpoint" {
   source  = "relaycorp/awala-endpoint/google"
-  version = "1.8.6"
+  version = "1.8.7"
 
   backend_name     = local.instance_name
   internet_address = var.awala_endpoint_internet_address
