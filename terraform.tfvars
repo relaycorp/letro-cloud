@@ -1,7 +1,8 @@
 google_region             = "europe-west1" # Belgium
 google_monthly_budget_usd = 100
 
-mongodb_atlas_region = "WESTERN_EUROPE" # Belgium
+mongodb_atlas_region       = "WESTERN_EUROPE" # Belgium
+mongodb_monthly_budget_usd = 20
 
 # ===== VeraId Authority
 

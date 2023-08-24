@@ -28,3 +28,24 @@ resource "google_billing_budget" "main" {
 
   depends_on = [google_project_service.services]
 }
+
+resource "mongodbatlas_alert_configuration" "billing" {
+  project_id = var.mongodb_atlas_project_id
+  event_type = "PENDING_INVOICE_OVER_THRESHOLD"
+  enabled    = true
+
+  metric_threshold_config {
+    operator  = "GREATER_THAN"
+    threshold = var.mongodb_monthly_budget_usd
+    units     = "RAW"
+  }
+
+  notification {
+    type_name     = "ORG"
+    interval_min  = 120
+    delay_min     = 0
+    sms_enabled   = false
+    email_enabled = true
+    roles         = ["ORG_BILLING_ADMIN"]
+  }
+}

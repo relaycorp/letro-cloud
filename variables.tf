@@ -5,6 +5,7 @@ variable "google_monthly_budget_usd" {}
 
 variable "mongodb_atlas_project_id" {}
 variable "mongodb_atlas_region" {}
+variable "mongodb_monthly_budget_usd" {}
 
 variable "sre_iam_uri" {
   description = "GCP IAM URI for an SRE or the SRE group (e.g., 'group:sre-team@acme.com')"
