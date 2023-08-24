@@ -8,6 +8,7 @@ locals {
     "iam.googleapis.com",
     "cloudscheduler.googleapis.com",
     "monitoring.googleapis.com",
+    "billingbudgets.googleapis.com",
   ]
 }
 
