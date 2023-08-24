@@ -22,6 +22,15 @@ module "endpoint" {
   depends_on = [time_sleep.wait_for_services]
 }
 
+resource "google_cloud_run_v2_job_iam_binding" "endpoint_bootstrap_invoker" {
+  project = var.google_project_id
+
+  location = var.google_region
+  name     = module.endpoint.bootstrap_job_name
+  role     = "roles/run.invoker"
+  members  = [var.sre_iam_uri]
+}
+
 resource "mongodbatlas_serverless_instance" "endpoint" {
   project_id = var.mongodb_atlas_project_id
   name       = "awala-endpoint"
