@@ -48,10 +48,10 @@ resource "google_pubsub_subscription" "letro_incoming_messages" {
 
 # ===== Outgoing messages
 
-resource "google_pubsub_topic_iam_binding" "letro_outgoing_messages_publisher" {
+resource "google_pubsub_topic_iam_member" "letro_outgoing_messages_publisher" {
   project = var.google_project_id
 
-  topic   = module.endpoint.pubsub_topics.outgoing_messages
-  role    = "roles/pubsub.publisher"
-  members = ["serviceAccount:${google_service_account.letro.email}", ]
+  topic  = module.endpoint.pubsub_topics.outgoing_messages
+  role   = "roles/pubsub.publisher"
+  member = "serviceAccount:${google_service_account.letro.email}"
 }
