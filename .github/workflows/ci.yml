@@ -1,0 +1,11 @@
+name: "Continuous Integration"
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    uses: relaycorp/shared-workflows/.github/workflows/tfmodule-ci.yml@main
+    with:
+      terraform_version: 1.5.3
