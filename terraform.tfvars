@@ -4,6 +4,12 @@ google_monthly_budget_usd = 100
 mongodb_atlas_region       = "WESTERN_EUROPE" # Belgium
 mongodb_monthly_budget_usd = 20
 
+# ===== Letro
+
+letro_docker_image_tag   = 12
+letro_min_instance_count = 0
+letro_max_instance_count = 3
+
 # ===== VeraId Authority
 
 veraid_authority_docker_image_tag   = "1.20.6"

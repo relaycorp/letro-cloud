@@ -15,6 +15,35 @@ variable "sre_email_addresses" {
   type        = list(string)
 }
 
+# ===== Letro
+
+variable "letro_docker_image_name" {
+  description = "The Docker image name for the Letro server"
+  default     = "relaycorp/letro"
+}
+variable "letro_docker_image_tag" {
+  description = "The Docker image tag for the Letro server"
+}
+
+variable "letro_log_level" {
+  description = "The log level for the Letro server"
+  default     = "info"
+}
+
+variable "letro_max_instance_request_concurrency" {
+  description = "The maximum number of concurrent requests per instance"
+  default     = 100
+}
+variable "letro_cpu_limit" {
+  description = "The CPU limit for each Letro instance"
+  default     = 2
+}
+variable "letro_min_instance_count" {
+  description = "The minimum number of Letro instances"
+}
+variable "letro_max_instance_count" {
+  description = "The maximum number of Letro instances"
+}
 
 # ===== VeraId Authority
 
