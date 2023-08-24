@@ -7,7 +7,7 @@ locals {
     "secretmanager.googleapis.com",
     "iam.googleapis.com",
     "cloudscheduler.googleapis.com",
-    "identitytoolkit.googleapis.com",
+    "monitoring.googleapis.com",
   ]
 }
 
