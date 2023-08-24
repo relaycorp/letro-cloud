@@ -53,14 +53,3 @@ resource "mongodbatlas_database_user" "authority" {
 resource "random_password" "mongodb_authority_user_password" {
   length = 32
 }
-
-# ===== API Authentication
-
-
-resource "google_identity_platform_config" "default" {
-  project = var.google_project_id
-
-  authorized_domains = [
-    "jwt.io",
-  ]
-}
