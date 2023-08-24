@@ -4,7 +4,7 @@ locals {
 
 module "authority" {
   source  = "relaycorp/veraid-authority/google"
-  version = "1.2.1"
+  version = "1.2.2"
 
   instance_name = local.instance_name
 
