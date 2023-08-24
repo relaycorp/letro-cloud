@@ -1,6 +1,6 @@
 resource "google_billing_budget" "main" {
   billing_account = var.google_billing_account_id
-  display_name    = "${data.google_project.main.project_id} (managed by TFE workspace ${terraform.workspace})"
+  display_name    = "${data.google_project.main.project_id} (TFE workspace ${terraform.workspace})"
 
   budget_filter {
     projects = ["projects/${data.google_project.main.number}"]
