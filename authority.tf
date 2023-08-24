@@ -35,6 +35,8 @@ resource "mongodbatlas_serverless_instance" "authority" {
   provider_settings_backing_provider_name = "GCP"
   provider_settings_provider_name         = "SERVERLESS"
   provider_settings_region_name           = var.mongodb_atlas_region
+
+  termination_protection_enabled = true
 }
 
 resource "mongodbatlas_database_user" "authority" {
