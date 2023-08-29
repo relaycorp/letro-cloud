@@ -34,6 +34,8 @@ resource "mongodbatlas_alert_configuration" "billing" {
   event_type = "PENDING_INVOICE_OVER_THRESHOLD"
   enabled    = true
 
+  // Using `threshold` instead of `metric_threshold_config` as a workaround. See:
+  // https://support.mongodb.com/case/01181377
   threshold = {
     operator  = "GREATER_THAN"
     threshold = var.mongodb_monthly_budget_usd
