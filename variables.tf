@@ -57,6 +57,15 @@ variable "veraid_authority_api_auth_audience" {
 variable "veraid_authority_api_superadmin_sub" {
   description = "The sub claim from the JWTs of the superadmin"
 }
+variable "veraid_authority_api_cpu_limit" {
+  description = "The CPU limit for the VeraId Authority API"
+}
+variable "veraid_authority_awala_backend_min_instance_count" {
+  description = "The minimum number of Awala backend instances from VeraId Authority"
+}
+variable "veraid_authority_queue_min_instance_count" {
+  description = "The minimum number of queue instances from VeraId Authority"
+}
 
 # ===== Awala Internet Endpoint
 
@@ -68,4 +77,7 @@ variable "awala_endpoint_internet_address" {
 }
 variable "awala_endpoint_pohttp_domain" {
   description = "The domain name for the PoHTTP server in the Awala Internet Endpoint"
+}
+variable "awala_endpoint_client_min_instance_count" {
+  description = "The minimum number of Awala Internet Endpoint client instances"
 }

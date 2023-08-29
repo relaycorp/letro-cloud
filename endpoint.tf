@@ -14,6 +14,8 @@ module "endpoint" {
 
   pohttp_server_domain = var.awala_endpoint_pohttp_domain
 
+  pohttp_client_min_instance_count = var.awala_endpoint_client_min_instance_count
+
   mongodb_uri      = "${mongodbatlas_serverless_instance.endpoint.connection_strings_standard_srv}/?${local.mongodb_connection_options}"
   mongodb_db       = local.endpoint_db_name
   mongodb_user     = mongodbatlas_database_user.endpoint.username

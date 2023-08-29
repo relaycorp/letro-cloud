@@ -23,6 +23,11 @@ module "authority" {
   awala_endpoint_incoming_messages_topic = module.endpoint.pubsub_topics.incoming_messages
   awala_endpoint_outgoing_messages_topic = module.endpoint.pubsub_topics.outgoing_messages
 
+  # Cost optimisation
+  api_cpu_limit                    = var.veraid_authority_api_cpu_limit
+  awala_backend_min_instance_count = var.veraid_authority_awala_backend_min_instance_count
+  queue_min_instance_count         = var.veraid_authority_queue_min_instance_count
+
   depends_on = [time_sleep.wait_for_services]
 }
 
