@@ -34,7 +34,7 @@ resource "mongodbatlas_alert_configuration" "billing" {
   event_type = "PENDING_INVOICE_OVER_THRESHOLD"
   enabled    = true
 
-  metric_threshold_config {
+  threshold = {
     operator  = "GREATER_THAN"
     threshold = var.mongodb_monthly_budget_usd
     units     = "RAW"
