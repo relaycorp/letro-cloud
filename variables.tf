@@ -34,10 +34,6 @@ variable "letro_max_instance_request_concurrency" {
   description = "The maximum number of concurrent requests per instance"
   default     = 100
 }
-variable "letro_cpu_limit" {
-  description = "The CPU limit for each Letro instance"
-  default     = 2
-}
 variable "letro_min_instance_count" {
   description = "The minimum number of Letro instances"
 }
@@ -56,9 +52,6 @@ variable "veraid_authority_api_auth_audience" {
 }
 variable "veraid_authority_api_superadmin_sub" {
   description = "The sub claim from the JWTs of the superadmin"
-}
-variable "veraid_authority_api_cpu_limit" {
-  description = "The CPU limit for the VeraId Authority API"
 }
 variable "veraid_authority_awala_backend_min_instance_count" {
   description = "The minimum number of Awala backend instances from VeraId Authority"
