@@ -1,6 +1,6 @@
 # Server-side components for Relaycorp's Letro implementation
 
-This repository manages the cloud resources for the server-side components used by Relaycorp's Letro implementation.
+This repository manages the cloud resources for [Letro server](https://docs.relaycorp.tech/letro-server/) and its backing services in production.
 
 ## Manually-managed resources
 
