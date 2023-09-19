@@ -21,6 +21,8 @@ module "authority" {
   api_auth_audience = var.veraid_authority_api_auth_audience
   superadmin_sub    = var.veraid_authority_api_superadmin_sub
 
+  kms_protection_level = "HSM"
+
   awala_endpoint_enabled                 = true
   awala_endpoint_incoming_messages_topic = module.endpoint.pubsub_topics.incoming_messages
   awala_endpoint_outgoing_messages_topic = module.endpoint.pubsub_topics.outgoing_messages

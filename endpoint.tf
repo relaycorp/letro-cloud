@@ -14,6 +14,8 @@ module "endpoint" {
   project_id = var.google_project_id
   region     = var.google_region
 
+  kms_protection_level = "HSM"
+
   pohttp_server_domain = var.awala_endpoint_pohttp_domain
 
   pohttp_client_min_instance_count = var.awala_endpoint_client_min_instance_count
