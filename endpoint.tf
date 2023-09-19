@@ -4,10 +4,12 @@ locals {
 
 module "endpoint" {
   source  = "relaycorp/awala-endpoint/google"
-  version = "1.8.10"
+  version = "1.8.13"
 
   backend_name     = local.instance_name
   internet_address = var.awala_endpoint_internet_address
+
+  docker_image_tag = var.awala_endpoint_docker_image_tag
 
   project_id = var.google_project_id
   region     = var.google_region

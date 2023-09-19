@@ -4,9 +4,11 @@ locals {
 
 module "authority" {
   source  = "relaycorp/veraid-authority/google"
-  version = "1.2.7"
+  version = "1.2.9"
 
   instance_name = local.instance_name
+
+  docker_image_tag = var.veraid_authority_docker_image_tag
 
   project_id = var.google_project_id
   region     = var.google_region
