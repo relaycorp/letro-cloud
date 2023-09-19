@@ -16,7 +16,6 @@ veraid_authority_docker_image_tag   = "1.21.1"
 veraid_authority_api_auth_audience  = "1053273447752-rtiji7vtdj0b2rd6lpu3dhmglp27qbjf.apps.googleusercontent.com"
 veraid_authority_api_superadmin_sub = ""
 
-veraid_authority_api_cpu_limit                    = 1
 veraid_authority_awala_backend_min_instance_count = 0
 veraid_authority_queue_min_instance_count         = 0
 
