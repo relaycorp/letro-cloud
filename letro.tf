@@ -57,6 +57,11 @@ resource "google_cloud_run_v2_service" "letro" {
       }
 
       env {
+        name  = "VAUTH_API_URL"
+        value = module.authority.api_url
+      }
+
+      env {
         name  = "LOG_LEVEL"
         value = var.letro_log_level
       }
