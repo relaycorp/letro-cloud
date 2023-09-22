@@ -14,6 +14,9 @@ variable "sre_email_addresses" {
   description = "Email address for each SRE at Relaycorp"
   type        = list(string)
 }
+variable "superadmin_email_address" {
+  description = "Email address for the superadmin"
+}
 
 # ===== Letro
 
@@ -49,9 +52,6 @@ variable "veraid_authority_docker_image_tag" {
 variable "veraid_authority_api_auth_audience" {
   description = "The OAuth2 audience"
   type        = string
-}
-variable "veraid_authority_api_superadmin_sub" {
-  description = "The sub claim from the JWTs of the superadmin"
 }
 variable "veraid_authority_awala_backend_min_instance_count" {
   description = "The minimum number of Awala backend instances from VeraId Authority"

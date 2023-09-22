@@ -20,7 +20,7 @@ module "authority" {
   mongodb_password = random_password.mongodb_authority_user_password.result
 
   api_auth_audiences = [var.veraid_authority_api_auth_audience, local.authority_api_auth_audience]
-  superadmin_sub     = var.veraid_authority_api_superadmin_sub
+  superadmin_sub     = var.superadmin_email_address
 
   kms_protection_level = "HSM"
 
