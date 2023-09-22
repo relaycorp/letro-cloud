@@ -1,10 +1,11 @@
 locals {
-  authority_db_name = "veraid-authority"
+  authority_db_name           = "veraid-authority"
+  authority_api_auth_audience = "https://github.com/relaycorp/letro-cloud"
 }
 
 module "authority" {
   source  = "relaycorp/veraid-authority/google"
-  version = "1.3.0"
+  version = "1.4.0"
 
   instance_name = local.instance_name
 
@@ -18,8 +19,8 @@ module "authority" {
   mongodb_user     = mongodbatlas_database_user.authority.username
   mongodb_password = random_password.mongodb_authority_user_password.result
 
-  api_auth_audience = var.veraid_authority_api_auth_audience
-  superadmin_sub    = var.veraid_authority_api_superadmin_sub
+  api_auth_audiences = [var.veraid_authority_api_auth_audience, local.authority_api_auth_audience]
+  superadmin_sub     = var.veraid_authority_api_superadmin_sub
 
   kms_protection_level = "HSM"
 

@@ -60,6 +60,10 @@ resource "google_cloud_run_v2_service" "letro" {
         name  = "VAUTH_API_URL"
         value = module.authority.api_url
       }
+      env {
+        name  = "VAUTH_API_AUDIENCE"
+        value = local.authority_api_auth_audience
+      }
 
       env {
         name  = "LOG_LEVEL"

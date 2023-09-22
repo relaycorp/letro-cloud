@@ -6,13 +6,13 @@ mongodb_monthly_budget_usd = 20
 
 # ===== Letro
 
-letro_docker_image_tag   = 14
+letro_docker_image_tag   = 15
 letro_min_instance_count = 0
 letro_max_instance_count = 3
 
 # ===== VeraId Authority
 
-veraid_authority_docker_image_tag   = "1.21.2"
+veraid_authority_docker_image_tag   = "1.22.0"
 veraid_authority_api_auth_audience  = "1053273447752-rtiji7vtdj0b2rd6lpu3dhmglp27qbjf.apps.googleusercontent.com"
 veraid_authority_api_superadmin_sub = "114581933583490416140"
 
