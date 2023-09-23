@@ -6,7 +6,7 @@ mongodb_monthly_budget_usd = 20
 
 # ===== Letro
 
-letro_docker_image_tag   = 15
+letro_docker_image_tag   = 16
 letro_min_instance_count = 0
 letro_max_instance_count = 3
 
