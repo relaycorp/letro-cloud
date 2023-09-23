@@ -6,6 +6,7 @@ This repository manages the cloud resources for [Letro server](https://docs.rela
 
 - OAuth2 client on GCP (used by VeraId Authority API), since [there's currently no Google API that supports managing this resource](https://issuetracker.google.com/issues/116182848).
 - DNS records for `letro.app`, which are managed by Cloudflare.
+- [Error Reporting](https://cloud.google.com/error-reporting) notifications, as there's no Terraform resource for them.
 
 ## Generate superadmin token for the VeraId Authority API
 
