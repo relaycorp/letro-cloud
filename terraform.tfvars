@@ -7,7 +7,7 @@ mongodb_monthly_budget_usd = 20
 # ===== Letro
 
 letro_docker_image_tag   = 16
-letro_min_instance_count = 0
+letro_min_instance_count = 1
 letro_max_instance_count = 3
 
 # ===== VeraId Authority
@@ -24,4 +24,4 @@ awala_endpoint_docker_image_tag = "1.8.16"
 awala_endpoint_internet_address = "letro.app"
 awala_endpoint_pohttp_domain    = "pohttp.letro.app"
 
-awala_endpoint_client_min_instance_count = 0
+awala_endpoint_client_min_instance_count = 1
