@@ -35,3 +35,10 @@ resource "google_project_iam_member" "project_viewer" {
   role   = "roles/viewer"
   member = var.sre_iam_uri
 }
+
+resource "google_project_iam_member" "logs_viewer" {
+  project = var.google_project_id
+
+  role   = "roles/logging.viewer"
+  member = var.sre_iam_uri
+}

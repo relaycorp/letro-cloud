@@ -10,6 +10,9 @@ variable "mongodb_monthly_budget_usd" {}
 variable "sre_iam_uri" {
   description = "GCP IAM URI for an SRE or the SRE group (e.g., 'group:sre-team@acme.com')"
 }
+variable "logs_viewer_iam_uri" {
+  description = "GCP IAM URI for an individual/team to view logs"
+}
 variable "sre_email_addresses" {
   description = "Email address for each SRE at Relaycorp"
   type        = list(string)
