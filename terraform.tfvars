@@ -20,7 +20,7 @@ veraid_authority_queue_min_instance_count         = 0
 
 # ===== Awala Internet Endpoint
 
-awala_endpoint_docker_image_tag = "1.8.16"
+awala_endpoint_docker_image_tag = "1.8.19"
 awala_endpoint_internet_address = "letro.app"
 awala_endpoint_pohttp_domain    = "pohttp.letro.app"
 
